@@ -1,5 +1,7 @@
 import PropTypes from "prop-types";
 
+import "./Header.css";
+
 export function Header({ setCartVisible, cartVisible, cart }) {
   return (
     <>

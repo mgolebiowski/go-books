@@ -1,0 +1,12 @@
+.bookCard {
+    display: flex;
+    margin-bottom: 2em;
+}
+
+.bookCard h3 {
+    margin-top: 0;
+}
+
+.bookImgCol {
+    margin-right: 1em;
+}

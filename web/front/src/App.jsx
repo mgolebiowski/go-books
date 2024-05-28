@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import cs from "classnames";
+
 import "./App.css";
+
 import { BookCard } from "./components/BookCard";
 import { Header } from "./components/Header";
 import { CartItem } from "./components/CartItem";
@@ -8,7 +10,6 @@ import { CartItem } from "./components/CartItem";
 function App() {
   const [books, setBooks] = useState([]);
   const [cart, setCart] = useState([]);
-  const [cartStatues, setCartStatues] = useState([]);
   const [cartVisible, setCartVisible] = useState(false);
   useEffect(() => {
     fetch("/api/books")
@@ -20,7 +21,6 @@ function App() {
     if (cart.find((b) => b.id === book.id)) {
       return;
     }
-    setCartStatues([...cartStatues, { id: book.id, valid: true }]);
     setCart([...cart, { ...book, quantity: 1 }]);
   };
 
@@ -45,8 +45,6 @@ function App() {
               book={book}
               cart={cart}
               setCart={setCart}
-              cartStatues={cartStatues}
-              setCartStatues={setCartStatues}
               key={"cart-" + book.id}
             />
           ))}

@@ -1,5 +1,7 @@
 import PropTypes from "prop-types";
 
+import "./BookCard.css";
+
 export function BookCard({ book, addToCart }) {
   return (
     <div className="bookCard">
