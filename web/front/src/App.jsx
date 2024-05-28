@@ -14,7 +14,9 @@ function App() {
   useEffect(() => {
     fetch("/api/books")
       .then((res) => res.json())
-      .then((data) => setBooks(data));
+      .then((data) => {
+        setBooks(data);
+      });
   }, []);
 
   const addToCart = (book) => {

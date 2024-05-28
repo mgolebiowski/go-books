@@ -11,6 +11,11 @@ front_build:
 	@echo "Building frontend"
 	@cd web/front && npm run build
 
+front_test:
+	@make nvm
+	@echo "Testing frontend"
+	@cd web/front && npm run test
+
 run:
 	@echo "Running server"
 	@go run cmd/go-books/main.go

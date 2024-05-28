@@ -14,3 +14,6 @@
 - `make run`
 
 By default, the website is available under http://localhost:8080
+
+## Run frontend tests
+- `make front_test`
